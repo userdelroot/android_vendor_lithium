@@ -1,0 +1,11 @@
+#!/system/bin/sh
+#
+# Display startup banner
+
+LOG="log -p i -t lithium"
+
+BUILDVER=$(getprop ro.build.version.release)
+BUILDID=$(getprop ro.build.id)
+DISPID=$(getprop ro.build.display.id)
+
+${LOG} "Android ${BUILDVER}_${DISPLID}-${BUILDID}"
