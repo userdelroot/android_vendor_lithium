@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     DrmProvider \
     Email \
     Gallery3D \
+    LatinIME \
     Launcher2 \
     Mms \
     Music \
