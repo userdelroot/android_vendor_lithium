@@ -2,10 +2,13 @@
 #
 # Display startup banner
 
-LOG="log -p i -t lithium"
+LOG="log -p i -t LITHIUM"
 
 BUILDVER=$(getprop ro.build.version.release)
 BUILDID=$(getprop ro.build.id)
 DISPID=$(getprop ro.build.display.id)
+ROM=$(getprop ro.lithium.build.name)
+ROMVER=$(getprop ro.lithium.build.version)
 
-${LOG} "Android ${BUILDVER}_${DISPLID}-${BUILDID}"
+${LOG} "Android-${BUILDVER}_${DISPLID}-${BUILDID}"
+${LOG} "Rom ${ROM}-${ROMVER}"
