@@ -20,7 +20,6 @@ PRODUCT_PACKAGES := \
     Home \
     HTMLViewer \
     Phone \
-    ApplicationsProvider \
     ContactsProvider \
     DownloadProvider \
     MediaProvider \
@@ -31,8 +30,10 @@ PRODUCT_PACKAGES := \
     VpnServices \
     UserDictionaryProvider \
     PackageInstaller \
-    DefaultContainerService \
-    Bugreport
+    DefaultContainerService 
+    
+	#Bugreport
+    #ApplicationsProvider \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-player=true \
