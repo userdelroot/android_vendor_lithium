@@ -10,5 +10,5 @@ DISPID=$(getprop ro.build.display.id)
 ROM=$(getprop ro.lithium.build.name)
 ROMVER=$(getprop ro.lithium.build.version)
 
-${LOG} "Android-${BUILDVER}_${DISPLID}-${BUILDID}"
+${LOG} "Android ${BUILDVER}_${DISPLID}-${BUILDID}"
 ${LOG} "Rom ${ROM}-${ROMVER}"
