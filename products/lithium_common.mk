@@ -1,7 +1,7 @@
 $(call inherit-product, vendor/lithium/products/lithium_generic.mk)
 
 # Generic LithiumMod product
-PRODUCT_NAME := lithium
+PRODUCT_NAME := lithium_common
 PRODUCT_BRAND := lithium
 PRODUCT_DEVICE := 
 
@@ -9,12 +9,12 @@ PRODUCT_DEVICE :=
 PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
-    MagicSmokeWallpapers \
     SoundRecorder \
     VisualizationWallpapers \
     VoiceDialer \
     libRS \
     librs_jni
+    # MagicSmokeWallpapers \
 
 # already included in lithium_core
 #PRODUCT_POLICY := android.policy_phone
@@ -45,6 +45,7 @@ include frameworks/base/data/sounds/AudioPackage4.mk
 
 PRODUCT_COPY_FILES += \
      vendor/lithium/prebuilt/common/bin/jrummy16_script.sh:system/bin/jrummy16_script.sh \
+     vendor/lithium/prebuilt/common/bin/sysinit.lithium:system/bin/sysinit.lithium \
      vendor/lithium/prebuilt/common/xbin/htop:system/xbin/htop \
      vendor/lithium/prebuilt/common/xbin/irssi:system/xbin/irssi \
      vendor/lithium/prebuilt/common/xbin/lsof:system/xbin/lsof \
@@ -54,11 +55,11 @@ PRODUCT_COPY_FILES += \
      vendor/lithium/prebuilt/common/etc/profile:system/etc/profile \
      vendor/lithium/prebuilt/common/etc/init.d/00_banner:system/etc/init.d/00_banner \
      vendor/lithium/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh \
-     vendor/lithium/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+     vendor/lithium/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
+     vendor/lithium/prebuilt/common/etc/init.lithium.rc:system/etc/init.lithium.rc
 
 #    vendor/lithium/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
 #    vendor/lithium/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
-#    vendor/lithium/prebuilt/common/etc/init.local.rc:system/etc/init.local.rc \
 #    vendor/lithium/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
 #    vendor/lithium/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
 #    vendor/lithium/prebuilt/common/etc/init.d/04modules:system/etc/init.d/04modules \
@@ -120,11 +121,5 @@ else
         Provision \
         QuickSearchBox
 endif
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-meta=true   \
-    media.stagefright.enable-scan=true   \
-    media.stagefright.enable-http=true
 
 PRODUCT_LOCALES := en_US en_GB fr_FR it_IT de_DE es_ES
