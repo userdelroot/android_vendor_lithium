@@ -70,11 +70,8 @@ PRODUCT_COPY_FILES += \
 #    vendor/lithium/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
 #    vendor/lithium/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
 
-#PRODUCT_COPY_FILES +=  \
-#    vendor/lithium/proprietary/RomManager.apk:system/app/RomManager.apk 
-
 # Always run in insecure mode, enables root on user build variants
-#ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 
 ifdef LITHIUM_WITH_GOOGLE
     PRODUCT_COPY_FILES += \
