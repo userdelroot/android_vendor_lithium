@@ -37,8 +37,8 @@ PRODUCT_PROPERTY_OVERRIDES += ro.product.version=3.21.605.1
 
 
 # copy some prebuilts
-#PRODUCT_COPY_FILES +=  \
-#    vendor/lithium/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+PRODUCT_COPY_FILES +=  \
+    vendor/lithium/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
 
 # some standard overrides
 PRODUCT_PROPERTY_OVERRIDES += \
