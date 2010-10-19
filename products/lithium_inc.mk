@@ -11,8 +11,8 @@ build_version := $(build_version_major).$(build_version_minor).$(build_version_r
 # Setup device specific product configuration.
 #
 PRODUCT_NAME := lithium_inc
-#PRODUCT_BRAND := htc
-PRODUCT_BRAND := verizon_wwe
+PRODUCT_BRAND := htc
+#PRODUCT_BRAND := verizon_wwe
 PRODUCT_DEVICE := inc
 PRODUCT_MODEL := Incredible
 PRODUCT_MANUFACTURER := HTC
@@ -26,6 +26,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	BUILD_FINGERPRINT=verizon_wwe/inc/inc/inc:2.2/FRF91/231334:user/release-keys \
 	PRODUCT_BRAND=verizon_wwe \
 	TARGET_BUILD_TYPE=user \
+	USER=android-build \
 	BUILD_VERSION_TAGS=release-keys \
 	PRIVATE_BUILD_DESC="3.21.605.1 CL231334 release-keys" \
 	PRODUCT_MANUFACTURER=HTC
