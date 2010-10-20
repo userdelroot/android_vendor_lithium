@@ -16,14 +16,12 @@ PRODUCT_PACKAGES += \
     librs_jni
     # MagicSmokeWallpapers \
 
-# already included in lithium_core
-#PRODUCT_POLICY := android.policy_phone
-
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
 
+# this is from CM system/core. it skips some symlinks if set. commenting out since we don't support it (yet)
 # Tiny toolbox
-TINY_TOOLBOX:=true
+#TINY_TOOLBOX:=true
 
 # Enable Windows Media if supported by the board
 WITH_WINDOWS_MEDIA:=true
@@ -56,9 +54,9 @@ PRODUCT_COPY_FILES += \
      vendor/lithium/prebuilt/common/etc/init.d/00_banner:system/etc/init.d/00_banner \
      vendor/lithium/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh \
      vendor/lithium/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
-     vendor/lithium/prebuilt/common/etc/init.lithium.rc:system/etc/init.lithium.rc
+     vendor/lithium/prebuilt/common/etc/init.lithium.rc:system/etc/init.lithium.rc \
+     vendor/lithium/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
 
-#    vendor/lithium/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
 #    vendor/lithium/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
 #    vendor/lithium/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
 #    vendor/lithium/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
