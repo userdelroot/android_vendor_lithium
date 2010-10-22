@@ -30,10 +30,10 @@ PRODUCT_PACKAGES := \
     VpnServices \
     UserDictionaryProvider \
     PackageInstaller \
-    DefaultContainerService 
+    DefaultContainerService \
+    ApplicationsProvider
     
 	#Bugreport
-    #ApplicationsProvider \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-player=true \
