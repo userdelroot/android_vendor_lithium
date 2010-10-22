@@ -120,13 +120,13 @@ if [ ! -z "${LITHIUM_BUILD_NAME}" -a ! -z "${LITHIUM_BUILD_VERSION}" ] ; then
     cp "${WORK}/META-INF/com/google/android/updater-script" \
         "${WORK}/META-INF/com/google/android/updater-script.tmp"
 
-    # ui_print("Android Rom [BUILD]-[VERSION]! ")
-    echo "ui_print(\"Android Rom ${LITHIUM_BUILD_NAME}-${LITHIUM_BUILD_VERSION}! \");" \
+    # ui_print("Installing [BUILD]-[VERSION]! ")
+    echo "ui_print(\"Installing ${LITHIUM_BUILD_NAME}-${LITHIUM_BUILD_VERSION}! \");" \
         > "${WORK}/META-INF/com/google/android/updater-script"
 
     # ui_print("Rom installation ...")
-    echo "ui_print(\"Rom installation ...\");" \
-        >> "${WORK}/META-INF/com/google/android/updater-script"
+#    echo "ui_print(\"Rom installation ...\");" \
+#        >> "${WORK}/META-INF/com/google/android/updater-script"
 
     # copy the actual install script over
     cat "${WORK}/META-INF/com/google/android/updater-script.tmp" \
