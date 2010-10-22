@@ -44,8 +44,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.modversion=$(product_version) \
 	ro.rommanager.developerid=lithium \
 	ro.lithium.build.name=$(build_name) \
-	ro.lithium.build.version=$(build_version) \
-	ro.sf.lcd_density=192
+	ro.lithium.build.version=$(build_version)
+#	ro.sf.lcd_density=192
 
 # include proprietaries for now
 USE_PROPRIETARIES := \
