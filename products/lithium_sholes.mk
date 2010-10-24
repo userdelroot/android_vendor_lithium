@@ -17,8 +17,11 @@ PRODUCT_DEVICE := sholes
 PRODUCT_MODEL := Droid
 PRODUCT_MANUFACTURER := Motorola
 
-product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
-
+ifdef LITHIUM_NIGHTLY 
+    product_version := $(build_name)-$(shell date +%m%d%Y)-$(PRODUCT_MODEL)
+else
+    product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
+endif
 
 # 2.2 build prop overrides
 PRODUCT_BUILD_PROP_OVERRIDES := \

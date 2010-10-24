@@ -17,7 +17,11 @@ PRODUCT_DEVICE := inc
 PRODUCT_MODEL := Incredible
 PRODUCT_MANUFACTURER := HTC
 
-product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
+ifdef LITHIUM_NIGHTLY
+    product_version := $(build_name)-$(shell date +%m%d%Y)-$(PRODUCT_MODEL)
+else
+    product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
+endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	BUILD_ID=FRF91 \
