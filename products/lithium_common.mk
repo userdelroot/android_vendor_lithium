@@ -41,6 +41,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/lithium/overlay/common
 # Bring in some audio files
 include frameworks/base/data/sounds/AudioPackage4.mk
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.notification_sound=Droid.ogg
+
 PRODUCT_COPY_FILES += \
      vendor/lithium/prebuilt/common/bin/jrummy16_script.sh:system/bin/jrummy16_script.sh \
      vendor/lithium/prebuilt/common/bin/sysinit.lithium:system/bin/sysinit.lithium \
