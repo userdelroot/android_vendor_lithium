@@ -103,7 +103,7 @@ if [ -f "${WORK}/system/build.prop" ] ; then
     echo "Modifying build.prop: [${WORK}/system/build.prop]"
     grep -v "ro.kernel.android.checkjni" "${WORK}/system/build.prop" \
         | sed -e "s/^ro\.build\.type=eng$/ro\.build\.type=user/g" \
-        | sed -e "s/^ro\.build\.display\.id=\${LITHIUM_BUILD_ID}/ro\.build\.display\.id=${MODVERSION}/g" \
+        | sed -e "s/^ro\.build\.display\.id=${LITHIUM_BUILD_ID}/ro\.build\.display\.id=${MODVERSION}/g" \
         > "${WORK}/system/build.prop.tmp"
     mv "${WORK}/system/build.prop.tmp" "${WORK}/system/build.prop"
 fi
@@ -161,7 +161,7 @@ fi
 # time for zipping!
 olddir="$(pwd)"
 cd "${WORK}"
-zip -9r update.zip .
+zip -9rq update.zip .
 cd "${olddir}"
 
 # time for signing!
