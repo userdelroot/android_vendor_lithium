@@ -35,7 +35,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRIVATE_BUILD_DESC="3.21.605.1 CL231334 release-keys" \
 	PRODUCT_MANUFACTURER=HTC
 
-PRODUCT_PROPERTY_OVERRIDES += ro.product.version=3.21.605.1
+# already set in device.mk
+#PRODUCT_PROPERTY_OVERRIDES += \
+#	ro.product.version=3.21.605.1
 
 # Extra Passion overlay
 #PRODUCT_PACKAGE_OVERLAYS += vendor/lithium/overlay/inc
