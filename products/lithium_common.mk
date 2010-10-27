@@ -28,6 +28,7 @@ WITH_WINDOWS_MEDIA:=true
 
 # LithiumMod specific product packages
 PRODUCT_PACKAGES += \
+    LithiumModOptions \
     Superuser \
     SysInfo
 
@@ -42,7 +43,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/lithium/overlay/common
 include frameworks/base/data/sounds/AudioPackage4.mk
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.notification_sound=Droid.ogg
+    ro.config.notification_sound=Droid.ogg \
+    ro.telephony.call_ring.delay=1000
 
 PRODUCT_COPY_FILES += \
      vendor/lithium/prebuilt/common/bin/jrummy16_script.sh:system/bin/jrummy16_script.sh \
@@ -106,13 +108,10 @@ ifdef LITHIUM_WITH_GOOGLE
         vendor/lithium/proprietary/VoiceSearch.apk:./system/app/VoiceSearch.apk \
         vendor/lithium/proprietary/YouTube.apk:./system/app/YouTube.apk \
         vendor/lithium/proprietary/googlevoice.apk:./system/app/googlevoice.apk \
-        vendor/lithium/proprietary/kickback.apk:./system/app/kickback.apk \
-        vendor/lithium/proprietary/soundback.apk:./system/app/soundback.apk \
-        vendor/lithium/proprietary/talkback.apk:./system/app/talkback.apk \
         vendor/lithium/proprietary/com.google.android.maps.xml:./system/etc/permissions/com.google.android.maps.xml \
         vendor/lithium/proprietary/features.xml:./system/etc/permissions/features.xml \
         vendor/lithium/proprietary/com.google.android.maps.jar:./system/framework/com.google.android.maps.jar \
-        vendor/lithium/proprietary/libspeech.so:./system/lib/libspeech.so
+        vendor/lithium/proprietary/libspeech.so:./system/lib/libspeech.so \
         vendor/lithium/proprietary/libvoicesearch.so:./system/lib/libvoicesearch.so
 else
     PRODUCT_PACKAGES += \
