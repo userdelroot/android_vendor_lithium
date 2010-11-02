@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-# OptiOTA
-# Optimizes an OTA (update.zip) package for release
-# 
+# FixOta_Only
+# Fixes  the ota package for release
 # Changes made by userdelroot (r00t316@gmail.com)  10-07-2010
 # For quick fixes of builds for testing
 # 
@@ -67,11 +66,12 @@ rm -fr "${WORK}"
 mkdir -p "${WORK}"
 echo "Created work directory: [${WORK}]"
 
+
 # unpack
 unzip -qq "${OTAPACKAGE}" -d "${WORK}"
 
 # delete all unnecessary binaries from the bin folder
-for bin in "${DELETE_BINS}" ; do
+for bin in ${DELETE_BINS} ; do
     echo "Removing binary: [${WORK}/system/bin/${bin}]"
     rm -f "${WORK}/system/bin/${bin}"
 done
